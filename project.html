@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>BC Travel Guide</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+
+    </head>
+
+    <body>
+        <header>
+            <div class="content">
+                <div class="top">
+                    <img src="images/Logo.png" width="100" height="100" alt="icon">
+                    <h1>BC Travel Guide</h1>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#stories">Stories</a></li>
+                        <li><a href="#exploreMore">Explore More</a></li>
+                        <li><a href="#videoPart">Videos</a></li>
+                        <li><a href="#contactInfo">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <div id="signup">
+            <div class="floatingCard">
+                <div class="titleAndText">
+                    <h2>Sign Up</h2>
+                    <p>Become a member and share your journey to the world.</p>
+                </div>
+                <button id="signUpButton" onclick="signUpButton()"> Sign Up</button>
+            </div>
+        </div>
+
+        <article id="stories">
+            <div class="content">
+
+                <h2>Stories</h2>
+
+                <div class="largeArticles">
+                    <div class="articleCard">
+                        <div class="titleAndText">
+                            <h3>Vancouver</h3>
+                            <p>A bustling west coast seaport in British Columbia, is among Canada’s densest, most ethnically diverse cities.</p>
+                        </div>
+                        <div class="image">
+                            <img src="images/articleCover/Crypress-matt-drenth-p9N0WTyPjgc-unsplash.jpg" alt="article1Img">
+                        </div>
+                    </div>
+                    <div class="articleCard">
+                        <div class="titleAndText">
+                            <h3>Vancouver Island</h3>
+                            <p>Vancouver Island, off Canada’s Pacific Coast, is known for its mild climate and thriving arts community.</p>
+                        </div>
+                        <div class="image">
+                            <img src="images/articleCover/VanvoucerIsland-matt-drenth-Lx_QJ677Hkg-unsplash.jpg" alt="article1Img">
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="smallArticles">
+                    <div class="part1">
+                        <div class="articleCard">
+                            <div class="image">
+                                <img src="images/articleCover/Whistler-benjamin-hayward-bvvmZbZ3QUQ-unsplash.jpg" alt="article1Img">
+                            </div>
+                            <div class="titleAndText">
+                                <h3>Whistler</h3>
+                                <p>Whistler is a town north of Vancouver, British Columbia, that's home to Whistler Blackcomb, one of the largest ski resorts in North America.</p>
+                            </div>
+                        </div>
+                        <div class="articleCard">
+                            <div class="image">
+                                <img src="images/articleCover/SeaToSky-tim-woolliscroft--d6Btoap3dw-unsplash.jpg" alt="article1Img">
+                            </div>
+                            <div class="titleAndText">
+                                <h3>Sea-to-Sky Highway</h3>
+                                <p>Officially known as BC Highway 99, this legendary route from Vancouver to Whistler and beyond is a drive with incredible sights at just about every turn.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="part2">
+                        <div class="articleCard">
+                            <div class="image">
+                                <img src="images/articleCover/Stanly-lee-robinson-Yc9h5SJdEzI-unsplash.jpg" alt="article1Img">
+                            </div>
+                            <div class="titleAndText">
+                                <h3>Stanley Park</h3>
+                                <p>Stanley Park is a 405-hectare public park in British Columbia, Canada that makes up the northwestern half of Vancouver's Downtown Peninsula, surrounded by waters of Burrard Inlet and English Bay.</p>
+                            </div>
+                        </div>
+                        <div class="articleCard">
+                            <div class="image">
+                                <img src="images/articleCover/Capilano-tim-trad-cnj0k9wYEAk-unsplash.jpg" alt="article1Img">
+                            </div>
+                            <div class="titleAndText">
+                                <h3>Capilano Suspension Bridge</h3>
+                                <p>The Capilano Suspension Bridge is a simple suspension bridge crossing the Capilano River in the District of North Vancouver, British Columbia, Canada. </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </article>
+
+        <div id="exploreMore">
+            <div class="content">    
+                <div class="centredCard">
+                    <div class="titleAndText">
+                        <div class="loginForm">    
+                            <h2>Explore More</h2>
+                            <p>Subscribe to lastest stories and help us to improve your using experience.</p>
+                            <form action="signUp.php" method="POST">
+            
+                                <input type="text" name="yourName" placeholder="Your name" required autocomplete="off">
+                                <input type="text" name="email" placeholder="Email" required autocomplete="off">
+                
+                                <label for="theme-select">Choose your favourite article:</label>
+                                <select name="theme" id="theme-select">
+                                    <option value="">Please choose an option</option>
+                                    <option value="1">Vancouver</option>
+                                    <option value="2">Vancouver Island</option>
+                                    <option value="3">Whistler</option>
+                                    <option value="4">Sea-to-Sky Highway</option>
+                                    <option value="5">Stanley Park</option>
+                                    <option value="6">Capilano Suspension Bridge</option>
+                                </select>
+                                
+                                <input type="submit" name="submitButton" value="SUBMIT">      
+                            </form>
+                        </div>
+                    </div>
+                    <div class="image">
+                        <img src="images/photoWall/photoWall.jpg" height="200" alt="postButton">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <article id="videoPart">
+            <div class="content">
+                <div class="part1">
+                    <div class="video">
+                        <iframe src="https://www.youtube.com/embed/ivMP7NJBT_I" title="BRITISH COLUMBIA, CANADA (2022) | 14 Amazing Places to Visit in BC" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <div class="titleAndText">
+                        <h2>BRITISH COLUMBIA, CANADA (2022) | 14 Amazing Places to Visit in BC</h2>
+                        <p>British Columbia (BC) sits between the Pacific Ocean and the Rocky Mountains and is the westernmost province of Canada. It's known to be the most beautiful and diverse province in the country, ranging from rugged coastlines to immense mountain ranges and lush rainforests full of wildlife. In this video we'll show 14 incredible places you have to visit in BC. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="content">
+                <div class="part2">
+                    <div class="video">
+                        <iframe src="https://www.youtube.com/embed/M078XrAjBJQ" title="Canada Road Trip: Best Things To Do In British Columbia" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <div class="titleAndText">
+                        <h2>Canada Road Trip: Best Things To Do In British Columbia</h2>
+                        <p>In this video, we share some of the best things to do in British Columbia, including the best things to do in Vancouver, Vancouver Island, Kelowna, and more!</p>
+                        <p>Canada's west coast province is packed with jaw-dropping scenery and incredible adventures. Home to some of Canada's most varied landscapes, ranging from desert and ocean to mountains and forest, there truly is something for everyone in British Columbia.</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <div id="contactInfo">
+            <div class="content">
+                <div class="centredCard">
+                    <div class="image">
+                        <a href="https://www.google.com/maps/place/Langara+College/@49.2244201,-123.1114554,17z/data=!3m1!4b1!4m6!3m5!1s0x5486746f412563f7:0x36606d221509fdfe!8m2!3d49.2244201!4d-123.1088805!16zL20vMDZjMXg0?entry=ttu"><img src="images/map.png" height="300" alt="map" id="map"></a>
+                    </div>
+                    <div class="titleAndText">
+                        <h2>Contact Us</h2>
+                        <ul>
+                            <li><img src="images/icons/icons8-address-100.png" alt="address" class="icon"> 100 W 49th Ave, Vancouver, BC V5Y 2Z6</li>
+                            <li><img src="images/icons/icons8-phone-100.png" alt="phone" class="icon"> (604)968-0000</li>
+                            <li><img src="images/icons/icons8-email-96.png" alt="email" class="icon"> hzhang100@mylangara.ca</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer id="informations">
+            <div class="content">
+                <div class="top">
+                    <div class="left">
+                        <h3>Reference</h3>
+                        <p>Media source: <a href="index/mediaSource.html">link</a></p>
+                    </div>
+                    <div class="right">
+                        <h3>Author Info</h3>
+                        <p>Student Name: Han Zhang</p>
+                        <p>Student ID: 100422694 hzhang100</p>
+                    </div>    
+                </div>
+                <div class="bottom">
+                    <p> &lt; &copy; 2023, Han Zhang, Langara> </p>
+                    <img src="images/Logo.png" width="100" height="100" alt="icon">
+                </div>    
+            </div>
+        </footer>
+    </body>
+</html>
