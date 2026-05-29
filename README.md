@@ -1,20 +1,32 @@
 # BC Travel Guide
 
-BC Travel Guide is a static travel guide website about British Columbia, Canada. The page introduces popular BC destinations through travel story cards, featured videos, a subscription form, contact information, and a dedicated media source page.
+BC Travel Guide is a travel guide website about British Columbia, Canada. The page introduces popular BC destinations through travel story cards, featured videos, a subscription form, contact information, and a dedicated media source page. It also includes an optional PHP and MySQL subscription backend for running locally with XAMPP.
 
-## Overview
+## Live Demo
 
-This project is built with plain HTML, CSS, and JavaScript. It does not use a frontend framework or build tool. The main page is `index.html`, the styles are defined in `style.css`, and the small interactive behavior is handled in `script.js`.
+Pages demo:
+
+```text
+https://HanZ14c.github.io/BC-Travel-Guide/
+```
+
+The demo link shows the frontend version of the project. The PHP and MySQL subscription backend only works in a local XAMPP environment.
+
 
 ## Features
 
 - Responsive navigation with anchors for Stories, Explore More, Videos, and Contact Us.
-- Travel story cards for Vancouver, Vancouver Island, Whistler, Sea-to-Sky Highway, Stanley Park, and Capilano Suspension Bridge.
+- Travel story cards for Vancouver, Vancouver Island, etc.
 - Subscription form for collecting a visitor's name, email, and favorite article topic.
-- Sign Up button that displays a temporary alert message.
+- PHP form handler that saves subscriptions into a MySQL database.
+- Subscriber list page for viewing submitted records locally.
+- Sign Up button that scrolls to the subscription form.
 - Two embedded YouTube travel videos about British Columbia.
-- Contact section with address, phone number, email, and a map image linking to Google Maps.
-- Media source page at `pages/mediaSource.html` listing the image, video, icon, map, and logo font sources.
+- Contact section with an embedded Google Map.
+
+## Notes
+
+- GitHub Pages can host the frontend, but it cannot run PHP or MySQL. Use XAMPP or another PHP server for the subscription backend.
 
 ## Media Sources
 

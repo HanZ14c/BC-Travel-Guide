@@ -3,7 +3,7 @@
 /* body */
 body {
     background-color: black;
-    background-image: url(images/background.jpg);
+    background-image: url(../images/background.jpg);
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
@@ -177,6 +177,138 @@ header a:active {
     width: 100%;
 }
 
+a.articleCard {
+    color: inherit;
+    text-decoration: none;
+}
+
+a.articleCard:focus-visible {
+    outline: 3px solid rgb(143, 162, 169);
+    outline-offset: 4px;
+}
+
+/* story detail pages */
+.storyDetail {
+    padding: 2rem 1rem 3rem;
+}
+
+.storyArticle {
+    background-color: white;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    margin: auto;
+    max-width: 1040px;
+    padding: 1rem;
+}
+
+.storyDetail .backLink {
+    color: rgb(86, 118, 130);
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+.storyHero img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    display: block;
+}
+
+.storyIntroPanel {
+    border-bottom: 1px solid lightgray;
+    padding: 1.5rem 0 1rem;
+}
+
+.storyEyebrow {
+    color: rgb(86, 118, 130);
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 0;
+    margin: 0 0 0.5rem;
+    text-transform: uppercase;
+}
+
+.storyIntroPanel h2 {
+    font-size: 28pt;
+    line-height: 1.05;
+    margin: 0 0 1rem;
+}
+
+.storyIntroPanel p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin: 0;
+    max-width: 760px;
+}
+
+.storyLayout {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.storyText {
+    line-height: 1.7;
+    padding: 1.5rem 0 0;
+}
+
+.storyText h3,
+.storyMeta h3,
+.relatedStories h3 {
+    font-size: 16pt;
+    margin-top: 0;
+}
+
+.storyText ul {
+    padding-left: 1.25rem;
+}
+
+.storyText li {
+    margin-bottom: 0.5rem;
+}
+
+.storyMeta {
+    border-top: 1px solid lightgray;
+    padding-top: 1.25rem;
+}
+
+.storyMeta dl {
+    margin: 0;
+}
+
+.storyMeta dt {
+    color: rgb(86, 118, 130);
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+.storyMeta dt:first-child {
+    margin-top: 0;
+}
+
+.storyMeta dd {
+    margin: 0.25rem 0 0;
+}
+
+.relatedStories {
+    border-top: 1px solid lightgray;
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+}
+
+.relatedStories ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    list-style: none;
+    padding-left: 0;
+}
+
+.relatedStories a {
+    color: rgb(86, 118, 130);
+    font-weight: bold;
+}
+
 /* #exploreMore */
 #exploreMore {
     margin: auto;
@@ -213,6 +345,10 @@ input, select {
     border-bottom: 1px solid lightgray;
     margin-top: 10px;
     margin-bottom: 10px;
+}
+
+label {
+    text-align: left;
 }
 
 input[type='submit'] {
@@ -270,7 +406,8 @@ iframe {
 
 #contactInfo #map {
     width: 100%;
-    height: auto;
+    height: 300px;
+    border: none;
 }
 
 #contactInfo ul {
@@ -327,6 +464,56 @@ footer .bottom {
 
 footer a {
     color: aqua;
+}
+
+/* PHP result pages */
+.phpPage {
+    max-width: 1000px;
+    min-height: 100vh;
+    margin: auto;
+    padding: 2rem 1rem;
+    box-sizing: border-box;
+}
+
+.phpPanel {
+    background-color: white;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+    padding: 1.5rem;
+}
+
+.phpPanel h1 {
+    font-family: "DM Serif Display";
+    color: rgb(143, 162, 169);
+}
+
+.phpPanel a {
+    color: rgb(86, 118, 130);
+}
+
+.subscribersPanel {
+    overflow-x: auto;
+}
+
+.tableWrapper {
+    overflow-x: auto;
+}
+
+.phpPanel table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+.phpPanel th,
+.phpPanel td {
+    border: 1px solid lightgray;
+    padding: 0.75rem;
+    text-align: left;
+}
+
+.phpPanel th {
+    background-color: rgb(235, 235, 235);
+    color: rgb(86, 118, 130);
 }
 
 @media screen and (min-width:450px) {
@@ -401,6 +588,53 @@ footer a {
     nav ul {
         display: flex;
         flex-direction: row;
+    }
+
+    /* story detail pages */
+    .storyArticle {
+        padding: 1.5rem;
+    }
+
+    .storyHero img {
+        height: 360px;
+    }
+
+    .storyIntroPanel {
+        padding: 2rem 0 1.25rem;
+    }
+
+    .storyIntroPanel h2 {
+        font-size: 38pt;
+    }
+
+    .storyLayout {
+        display: grid;
+        grid-template-columns: minmax(0, 2fr) minmax(220px, 0.8fr);
+        gap: 2.5rem;
+    }
+
+    .storyText {
+        max-width: 680px;
+        padding-top: 2rem;
+    }
+
+    .storyMeta {
+        border-left: 1px solid lightgray;
+        border-top: none;
+        margin-top: 2rem;
+        padding-left: 1.5rem;
+        padding-top: 0;
+    }
+
+    .relatedStories {
+        margin-top: 2rem;
+        padding-top: 1.5rem;
+    }
+
+    .relatedStories ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1rem;
     }
 
     /* singup */
@@ -562,10 +796,8 @@ footer a {
     }
 
     #contactInfo #map {
-        width: auto;
-        height: auto;
-        max-width: 100%;
-        max-height: 436px;
+        width: 100%;
+        height: 436px;
     }
 
     /* footer */
@@ -623,5 +855,10 @@ footer a {
 
     .smallArticles .part1, .smallArticles .part2 {
         width: 50%;
+    }
+
+    /* story detail pages */
+    .storyHero img {
+        height: 430px;
     }
 }

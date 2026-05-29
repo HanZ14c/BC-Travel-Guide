@@ -4,8 +4,8 @@
         <title>BC Travel Guide</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="stylesheet" href="style.css">
-        <script src="script.js"></script>
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/script.js"></script>
 
     </head>
 
@@ -43,66 +43,66 @@
                 <h2>Stories</h2>
 
                 <div class="largeArticles">
-                    <div class="articleCard">
+                    <a class="articleCard" href="pages/story.html?story=vancouver">
                         <div class="titleAndText">
                             <h3>Vancouver</h3>
-                            <p>A bustling west coast seaport in British Columbia, is among Canada’s densest, most ethnically diverse cities.</p>
+                            <p>A bustling west coast seaport in British Columbia, is among Canada's densest, most ethnically diverse cities.</p>
                         </div>
                         <div class="image">
-                            <img src="images/articleCover/Crypress-matt-drenth-p9N0WTyPjgc-unsplash.jpg" alt="article1Img">
+                            <img src="images/articleCover/Crypress-matt-drenth-p9N0WTyPjgc-unsplash.jpg" alt="Vancouver city and bridge view" loading="lazy">
                         </div>
-                    </div>
-                    <div class="articleCard">
+                    </a>
+                    <a class="articleCard" href="pages/story.html?story=vancouver-island">
                         <div class="titleAndText">
                             <h3>Vancouver Island</h3>
-                            <p>Vancouver Island, off Canada’s Pacific Coast, is known for its mild climate and thriving arts community.</p>
+                            <p>Vancouver Island, off Canada's Pacific Coast, is known for its mild climate and thriving arts community.</p>
                         </div>
                         <div class="image">
-                            <img src="images/articleCover/VanvoucerIsland-matt-drenth-Lx_QJ677Hkg-unsplash.jpg" alt="article1Img">
+                            <img src="images/articleCover/VanvoucerIsland-matt-drenth-Lx_QJ677Hkg-unsplash.jpg" alt="Rocky Vancouver Island coastline" loading="lazy">
                         </div>
-                    </div>
+                    </a>
                 </div>
     
                 <div class="smallArticles">
                     <div class="part1">
-                        <div class="articleCard">
+                        <a class="articleCard" href="pages/story.html?story=whistler">
                             <div class="image">
-                                <img src="images/articleCover/Whistler-benjamin-hayward-bvvmZbZ3QUQ-unsplash.jpg" alt="article1Img">
+                                <img src="images/articleCover/Whistler-benjamin-hayward-bvvmZbZ3QUQ-unsplash.jpg" alt="Lake and mountain view near Whistler" loading="lazy">
                             </div>
                             <div class="titleAndText">
                                 <h3>Whistler</h3>
                                 <p>Whistler is a town north of Vancouver, British Columbia, that's home to Whistler Blackcomb, one of the largest ski resorts in North America.</p>
                             </div>
-                        </div>
-                        <div class="articleCard">
+                        </a>
+                        <a class="articleCard" href="pages/story.html?story=sea-to-sky-highway">
                             <div class="image">
-                                <img src="images/articleCover/SeaToSky-tim-woolliscroft--d6Btoap3dw-unsplash.jpg" alt="article1Img">
+                                <img src="images/articleCover/SeaToSky-tim-woolliscroft--d6Btoap3dw-unsplash.jpg" alt="Aerial view of the Sea-to-Sky Highway" loading="lazy">
                             </div>
                             <div class="titleAndText">
                                 <h3>Sea-to-Sky Highway</h3>
                                 <p>Officially known as BC Highway 99, this legendary route from Vancouver to Whistler and beyond is a drive with incredible sights at just about every turn.</p>
                             </div>
-                        </div>
+                        </a>
                     </div>
                     <div class="part2">
-                        <div class="articleCard">
+                        <a class="articleCard" href="pages/story.html?story=stanley-park">
                             <div class="image">
-                                <img src="images/articleCover/Stanly-lee-robinson-Yc9h5SJdEzI-unsplash.jpg" alt="article1Img">
+                                <img src="images/articleCover/Stanly-lee-robinson-Yc9h5SJdEzI-unsplash.jpg" alt="Aerial view of Stanley Park and bridge" loading="lazy">
                             </div>
                             <div class="titleAndText">
                                 <h3>Stanley Park</h3>
                                 <p>Stanley Park is a 405-hectare public park in British Columbia, Canada that makes up the northwestern half of Vancouver's Downtown Peninsula, surrounded by waters of Burrard Inlet and English Bay.</p>
                             </div>
-                        </div>
-                        <div class="articleCard">
+                        </a>
+                        <a class="articleCard" href="pages/story.html?story=capilano-suspension-bridge">
                             <div class="image">
-                                <img src="images/articleCover/Capilano-tim-trad-cnj0k9wYEAk-unsplash.jpg" alt="article1Img">
+                                <img src="images/articleCover/Capilano-tim-trad-cnj0k9wYEAk-unsplash.jpg" alt="Person standing on Capilano Suspension Bridge" loading="lazy">
                             </div>
                             <div class="titleAndText">
                                 <h3>Capilano Suspension Bridge</h3>
                                 <p>The Capilano Suspension Bridge is a simple suspension bridge crossing the Capilano River in the District of North Vancouver, British Columbia, Canada. </p>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
 
@@ -115,21 +115,23 @@
                     <div class="titleAndText">
                         <div class="loginForm">    
                             <h2>Explore More</h2>
-                            <p>Subscribe to lastest stories and help us to improve your using experience.</p>
-                            <form action="signUp.php" method="POST">
+                            <p>Subscribe to latest stories and help us improve your experience.</p>
+                            <form action="php/signUp.php" method="POST" onsubmit="ensurePhpServer(event)">
             
-                                <input type="text" name="yourName" placeholder="Your name" required autocomplete="off">
-                                <input type="text" name="email" placeholder="Email" required autocomplete="off">
+                                <label for="your-name">Your name:</label>
+                                <input type="text" id="your-name" name="yourName" placeholder="Your name" required autocomplete="name">
+                                <label for="email-address">Email:</label>
+                                <input type="email" id="email-address" name="email" placeholder="Email" required autocomplete="email">
                 
                                 <label for="theme-select">Choose your favourite article:</label>
-                                <select name="theme" id="theme-select">
+                                <select name="theme" id="theme-select" required>
                                     <option value="">Please choose an option</option>
-                                    <option value="1">Vancouver</option>
-                                    <option value="2">Vancouver Island</option>
-                                    <option value="3">Whistler</option>
-                                    <option value="4">Sea-to-Sky Highway</option>
-                                    <option value="5">Stanley Park</option>
-                                    <option value="6">Capilano Suspension Bridge</option>
+                                    <option value="Vancouver">Vancouver</option>
+                                    <option value="Vancouver Island">Vancouver Island</option>
+                                    <option value="Whistler">Whistler</option>
+                                    <option value="Sea-to-Sky Highway">Sea-to-Sky Highway</option>
+                                    <option value="Stanley Park">Stanley Park</option>
+                                    <option value="Capilano Suspension Bridge">Capilano Suspension Bridge</option>
                                 </select>
                                 
                                 <input type="submit" name="submitButton" value="SUBMIT">      
@@ -137,7 +139,7 @@
                         </div>
                     </div>
                     <div class="image">
-                        <img src="images/photoWall/photoWall.jpg" height="200" alt="postButton">
+                        <img src="images/photoWall/photoWall.jpg" height="200" alt="British Columbia travel photo wall" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -173,14 +175,21 @@
             <div class="content">
                 <div class="centredCard">
                     <div class="image">
-                        <a href="https://www.google.com/maps/place/Langara+College/@49.2244201,-123.1114554,17z/data=!3m1!4b1!4m6!3m5!1s0x5486746f412563f7:0x36606d221509fdfe!8m2!3d49.2244201!4d-123.1088805!16zL20vMDZjMXg0?entry=ttu"><img src="images/map.png" height="300" alt="map" id="map"></a>
+                        <iframe
+                            id="map"
+                            title="Map showing UBC"
+                            src="https://www.google.com/maps?q=University%20of%20British%20Columbia%2C%202328%20Main%20Mall%2C%20Vancouver%2C%20BC&output=embed"
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            allowfullscreen>
+                        </iframe>
                     </div>
                     <div class="titleAndText">
                         <h2>Contact Us</h2>
                         <ul>
-                            <li><img src="images/icons/icons8-address-100.png" alt="address" class="icon"> 100 W 49th Ave, Vancouver, BC V5Y 2Z6</li>
+                            <li><img src="images/icons/icons8-address-100.png" alt="address" class="icon"> 2328 Main Mall, Vancouver, BC V6T 1Z4</li>
                             <li><img src="images/icons/icons8-phone-100.png" alt="phone" class="icon"> (604)968-0000</li>
-                            <li><img src="images/icons/icons8-email-96.png" alt="email" class="icon"> hzhang100@mylangara.ca</li>
+                            <li><img src="images/icons/icons8-email-96.png" alt="email" class="icon"> hz@gmail.com</li>
                         </ul>
                     </div>
                 </div>
@@ -196,12 +205,11 @@
                     </div>
                     <div class="right">
                         <h3>Author Info</h3>
-                        <p>Student Name: Han Zhang</p>
-                        <p>Student ID: 100422694 hzhang100</p>
+                        <p>HZ</p>
                     </div>    
                 </div>
                 <div class="bottom">
-                    <p> &lt; &copy; 2023, Han Zhang, Langara> </p>
+                    <p> &lt; &copy; 2026, HZ> </p>
                     <img src="images/Logo.png" width="100" height="100" alt="icon">
                 </div>    
             </div>
