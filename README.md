@@ -4,11 +4,7 @@ BC Travel Guide is a travel guide website about British Columbia, Canada. The pa
 
 ## Live Demo
 
-Pages demo:
-
-```text
-https://HanZ14c.github.io/BC-Travel-Guide/
-```
+[View Live Demo](https://hanz14c.github.io/BC-Travel-Guide/)
 
 The demo link shows the frontend version of the project. The PHP and MySQL subscription backend only works in a local XAMPP environment.
 
@@ -26,12 +22,4 @@ The demo link shows the frontend version of the project. The PHP and MySQL subsc
 
 ## Notes
 
-- GitHub Pages can host the frontend, but it cannot run PHP or MySQL. Use XAMPP or another PHP server for the subscription backend.
-
-## Media Sources
-
-For detailed media source information, see:
-
-```text
-pages/mediaSource.html
-```
+GitHub Pages can host the frontend, but it cannot run PHP or MySQL. Use XAMPP or another PHP server for the subscription backend.
