@@ -4,9 +4,7 @@ require_once 'database.php';
 $sql = "SELECT id, visitor_name, email, favourite_article, created_at
         FROM subscriptions
         ORDER BY created_at DESC";
-$statement = $conn->prepare($sql);
-$statement->execute();
-$subscribers = $statement->fetchAll();
+$subscribers = $conn->query($sql)->fetchAll();
 ?>
 <!DOCTYPE html>
 <html lang="en">

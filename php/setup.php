@@ -1,28 +1,22 @@
 <?php
 require_once 'config.php';
 
-$message = "";
+$conn = new PDO("mysql:host=$dbHost;port=$dbPort", $dbUser, $dbPassword);
+$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-try {
-    $conn = new PDO("mysql:host=$dbHost;port=$dbPort", $dbUser, $dbPassword);
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+$conn->exec("CREATE DATABASE IF NOT EXISTS $dbName");
+$conn->exec("USE $dbName");
+$conn->exec(
+    "CREATE TABLE IF NOT EXISTS subscriptions (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        visitor_name VARCHAR(100) NOT NULL,
+        email VARCHAR(255) NOT NULL,
+        favourite_article VARCHAR(80) NOT NULL,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    )"
+);
 
-    $conn->exec("CREATE DATABASE IF NOT EXISTS $dbName");
-    $conn->exec("USE $dbName");
-    $conn->exec(
-        "CREATE TABLE IF NOT EXISTS subscriptions (
-            id INT AUTO_INCREMENT PRIMARY KEY,
-            visitor_name VARCHAR(100) NOT NULL,
-            email VARCHAR(255) NOT NULL,
-            favourite_article VARCHAR(80) NOT NULL,
-            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-        )"
-    );
-
-    $message = "Database and table created successfully.";
-} catch (PDOException $error) {
-    $message = "Setup failed: " . $error->getMessage();
-}
+$message = "Database and table created successfully.";
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -8,19 +8,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST["email"];
     $theme = $_POST["theme"];
 
-    try {
-        $sql = "INSERT INTO subscriptions (visitor_name, email, favourite_article)
-                VALUES (:visitor_name, :email, :favourite_article)";
-        $statement = $conn->prepare($sql);
-        $statement->bindParam(":visitor_name", $name);
-        $statement->bindParam(":email", $email);
-        $statement->bindParam(":favourite_article", $theme);
-        $statement->execute();
+    $sql = "INSERT INTO subscriptions (visitor_name, email, favourite_article)
+            VALUES (?, ?, ?)";
+    $statement = $conn->prepare($sql);
+    $statement->execute([$name, $email, $theme]);
 
-        $message = "Thank you for subscribing to BC Travel Guide.";
-    } catch (PDOException $error) {
-        $message = "Subscription failed: " . $error->getMessage();
-    }
+    $message = "Thank you for subscribing to BC Travel Guide.";
 }
 ?>
 <!DOCTYPE html>
