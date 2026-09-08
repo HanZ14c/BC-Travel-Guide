@@ -20,6 +20,10 @@ The demo link shows the frontend version of the project. The PHP and MySQL subsc
 - Two embedded YouTube travel videos about British Columbia.
 - Contact section with an embedded Google Map.
 
+## Structure
+
+![Structure](doc/Architecture%20Diagram.jpg)
+
 ## Notes
 
 GitHub Pages can host the frontend, but it cannot run PHP or MySQL. Use XAMPP or another PHP server for the subscription backend.
